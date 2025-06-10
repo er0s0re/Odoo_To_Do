@@ -34,7 +34,9 @@
             <field name="name">todo.task.tree</field>
             <field name="model">todo.task</field>
             <field name="type">list</field> <field name="arch" type="xml">
-                <list string="Daftar Tugas">
+                <list string="Daftar Tugas"
+                decoration-danger="priority == '2'"
+                decoration-success="is_done == True">
                     <field name="name"/>
                     <field name="due_date"/>
                     <field name="priority"/>
