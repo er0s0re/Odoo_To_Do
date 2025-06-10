@@ -6,6 +6,9 @@
             <field name="name">todo.task.form</field>
             <field name="model">todo.task</field> <field name="arch" type="xml">
                 <form string="Form Tugas">
+                    <header>
+                        <button name="action_mark_as_done" type="object" string="Tandai Selesai" class="oe_highlight"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>

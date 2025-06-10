@@ -37,3 +37,10 @@ class TodoTask(models.Model):
         ('1', 'Sedang'),
         ('2', 'Tinggi')
     ], string='Prioritas', default='1') # Defaultnya kita set 'Sedang'
+
+    def action_mark_as_done(self):
+        """Method untuk menandai tugas sebagai selesai."""
+        for task in self:
+            task.is_done = True
+            task.priority = '0'
+        return True
